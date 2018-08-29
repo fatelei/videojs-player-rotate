@@ -1,6 +1,6 @@
 {
   "name": "videojs-rotate-player-plugin",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Rotate video player",
   "main": "dist/videojs-rotate-player-plugin.cjs.js",
   "module": "dist/videojs-rotate-player-plugin.es.js",
@@ -23,7 +23,7 @@
     "docs:api": "jsdoc src -g plugins/markdown -r -c scripts/jsdoc.json -d docs/api",
     "docs:toc": "doctoc README.md",
     "lint": "vjsstandard",
-    "server": "karma start scripts/karma.conf.js --singleRun=false --auto-watch --no-browsers",
+    "server": "karma start ./scripts/karma.conf.js --singleRun=false --auto-watch",
     "start": "npm-run-all -p server watch",
     "pretest": "npm-run-all lint build",
     "test": "karma start scripts/karma.conf.js",
@@ -84,7 +84,8 @@
     "videojs-generate-postcss-config": "~2.0.1",
     "videojs-generate-rollup-config": "~2.0.1",
     "videojs-languages": "^1.0.0",
-    "videojs-standard": "^7.0.1"
+    "videojs-standard": "^7.0.1",
+    "natives": "^1.1.4"
   },
   "lint-staged": {
     "*.js": [
