@@ -28,11 +28,11 @@ class RotateButton extends Button {
   }
 
   buildCSSClass() {
-    return 'vjs-icon-circle-outline vjs-control vjs-button rotate-0';
+    return 'vjs-control vjs-button rotate-0';
   }
 
   handleClick() {
-    this.removeClass(`rotate-${this._currentRotate}`);
+    this.removeClass(`rotate-${this._currentRotateDeg}`);
     const tmpRotateDeg = this._currentRotateDeg + 90;
 
     const zoom = tmpRotateDeg % 180 === 0 ? 1 : 0.5;
@@ -43,7 +43,7 @@ class RotateButton extends Button {
 
     this._currentRotateDeg = tmpRotateDeg % 360 === 0 ? 0 : tmpRotateDeg;
     this.player().rotatePlayerPlugin().rotate({ rotate: this._currentRotateDeg, zoom });
-    this.addClass(`rotate-${this._currentRotate}`);
+    this.addClass(`rotate-${this._currentRotateDeg}`);
   }
 }
 

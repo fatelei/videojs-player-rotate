@@ -1,6 +1,6 @@
 {
   "name": "videojs-rotate-player-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Rotate video player",
   "main": "dist/videojs-rotate-player-plugin.cjs.js",
   "module": "dist/videojs-rotate-player-plugin.es.js",
